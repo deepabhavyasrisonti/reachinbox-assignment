@@ -1,0 +1,56 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  background: #101114;
+  color: #f4f4f5;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input, textarea {
+  outline: none;
+}
+
+::selection {
+  background: #635bff;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #393b45;
+  border-radius: 10px;
+}
+
+@layer components {
+  .input-field {
+    @apply w-full rounded-lg border border-[#30323A] bg-[#15171C]
+    px-4 py-3 text-sm text-white placeholder-gray-500
+    focus:border-violet-500 focus:ring-1 focus:ring-violet-500;
+  }
+
+  .primary-button {
+    @apply rounded-lg bg-violet-600 px-5 py-3
+    text-sm font-semibold text-white transition
+    hover:bg-violet-700 disabled:cursor-not-allowed
+    disabled:opacity-50;
+  }
+}
